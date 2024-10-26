@@ -1,12 +1,13 @@
 import { useRef, useState, useEffect, startTransition } from 'react';
-import { useLocation, useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate, Link } from 'react-router-dom';
 import { BASE_URL, logout} from '../Globals';
 import { alpha, styled } from '@mui/material/styles';
 import axios from 'axios';
 import logo from '../_assets/imgs/logocropped.png';
-import logoDesktop from '../_assets/imgs/logodesktop2.png';
+import logoDesktop from '../_assets/imgs/logodesktop.png';
 import menuIcon from './imgs/menuicon.svg';
 import menuIconClose from './imgs/menuiconclose.svg';
+import facebookIcon from './imgs/facebookicon.png';
 import mobileIcon from './imgs/mobileicon.svg';
 import emailIcon from './imgs/emailicon.svg';
 import Switch from '@mui/material/Switch';
@@ -47,6 +48,10 @@ export function Navigation () {
         return () => document.removeEventListener('click', handleOutsideAccountMenuClick, true);
     }, [menuDisplay]);
 
+    useEffect(() => {
+        setMenuDisplay("none");
+    }, [location.pathname]);
+
     const updateTheme = (theme) => {
         axios.post(`${BASE_URL}/profile/${user.username}/update_profile`, {
             "theme":theme
@@ -86,25 +91,33 @@ export function Navigation () {
                 ref={menuRef}
                 style={{display:menuDisplay}}>
 
-                <div className={'navigation-menu-item'}>
+                <div
+                    className={'navigation-menu-item'}
+                    onClick={() => navigate("/about")}>
 
                     About Us
 
                 </div>
 
-                <div className={'navigation-menu-item'}>
+                <div
+                    className={'navigation-menu-item'}
+                    onClick={() => navigate("/services")}>
 
                     Services
 
                 </div>
 
-                <div className={'navigation-menu-item'}>
+                <div
+                    className={'navigation-menu-item'}
+                    onClick={() => navigate("/contact")}>
 
                     Contact Us
 
                 </div>
 
-                <div className={'navigation-menu-item'}>
+                <div
+                    className={'navigation-menu-item'}
+                    onClick={() => navigate("/portal")}>
 
                     Client Portal
 
@@ -120,45 +133,125 @@ export function Navigation () {
 
                 <div className={'navigation-desktop-parent'}>
 
-                    <div className={'navigation-desktop-logo-container'}>
+                    <div className={'navigation-desktop-child'}>
 
-                        <img
-                            className={'navigation-desktop-logo'}
-                            src={logoDesktop}/>
+                        <div className={'navigation-desktop-logo-container'}>
+
+                            <img
+                                className={'navigation-desktop-logo'}
+                                src={logoDesktop}
+                                onClick={() => navigate("/")}/>
+
+                        </div>
+
+                        <div className={'navigation-desktop-menu-container'}>
+
+                            <div
+                                className={'navigation-desktop-menu-item'}
+                                onClick={() => navigate("/about")}>
+
+                                About Us
+
+                            </div>
+
+                            <div
+                                className={'navigation-desktop-menu-item'}
+                                onClick={() => navigate("/services")}>
+
+                                Services
+
+                            </div>
+
+                            <div
+                                className={'navigation-desktop-menu-item'}
+                                onClick={() => navigate("/contact")}>
+
+                                Contact Us
+
+                            </div>
+
+                            <div
+                                className={'navigation-desktop-menu-item'}
+                                style={{marginLeft:5}}
+                                onClick={() => navigate("/portal")}>
+
+                                Client Portal
+
+                            </div>
+
+                        </div>
 
                     </div>
 
-                    <div className={'navigation-desktop-menu-container'}>
-
-                        <div className={'navigation-desktop-menu-item'}>
-
-                            About Us
-
-                        </div>
-
-                        <div className={'navigation-desktop-menu-item'}>
-
-                            Services
-
-                        </div>
-
-                        <div className={'navigation-desktop-menu-item'}>
-
-                            Contact Us
-
-                        </div>
+                    <div className={'navigation-desktop-contacts-container'}>
 
                         <div
-                            className={'navigation-desktop-menu-item'}
-                            style={{marginLeft:5}}>
+                            className={'navigation-desktop-contact'}
+                            onClick={() => window.location.href = "https://www.facebook.com/people/OakLinx/61567673551189/"}>
 
-                            Client Portal
+                            <div className={'navigation-desktop-contact-icon-container'}>
+
+                                <img
+                                    className={'navigation-desktop-contact-icon'}
+                                    src={facebookIcon}/>
+                                    
+                            </div>
+
+                            <div className={'navigation-desktop-contact-text'}>
+
+                                Facebook
+
+                            </div>
+
+                        </div>
+
+                        <div className={'navigation-desktop-contact'}>
+
+                            <div className={'navigation-desktop-contact-icon-container'}>
+
+                                <img
+                                    className={'navigation-desktop-contact-icon'}
+                                    src={emailIcon}/>
+                                    
+                            </div>
+
+                            <div className={'navigation-desktop-contact-text'}>
+
+                                info@oaklinx.com
+
+                            </div>
+
+                        </div>
+
+                        <div className={'navigation-desktop-contact'}>
+
+                            <div className={'navigation-desktop-contact-icon-container'}>
+
+                                <img
+                                    className={'navigation-desktop-contact-icon'}
+                                    src={mobileIcon}/>
+                                    
+                            </div>
+
+                            <div className={'navigation-desktop-contact-text'}>
+
+                                555-555-5555
+
+                            </div>
 
                         </div>
 
                     </div>
 
                 </div>
+
+                <img
+                    className={'navigation-preload-logo'}
+                    src={logoDesktop}/>
+
+                <img
+                    className={'navigation-preload-logo'}
+                    src={logoDesktop}/>
 
             </div>
         )
@@ -185,13 +278,22 @@ export function Navigation () {
 
                     <img
                         className={'navigation-logo'}
-                        src={logo}/>
+                        src={logo}
+                        onClick={() => navigate("/")}/>
 
                 </div>
 
             </div>
 
             <Menu/>
+
+            <img
+                className={'navigation-preload-logo'}
+                src={logoDesktop}/>
+
+            <img
+                className={'navigation-preload-logo'}
+                src={logoDesktop}/>
 
         </div>
     );

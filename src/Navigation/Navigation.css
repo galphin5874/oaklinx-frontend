@@ -91,6 +91,16 @@
 
 .navigation-desktop-parent {
     display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width:100%;
+    background:var(--navigation-desktop-bg);
+}
+
+.navigation-desktop-child {
+    display:flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
@@ -110,6 +120,10 @@
 .navigation-desktop-logo {
     width:300px;
     height:auto;
+}
+
+.navigation-desktop-logo:hover {
+    cursor: pointer;
 }
 
 .navigation-desktop-menu-container {
@@ -132,4 +146,44 @@
     text-decoration: underline;
     transition-duration: .02s;
     font-weight: 500;
+}
+
+.navigation-desktop-contacts-container {
+    display:flex;
+    flex-direction: row;
+    background:#3e546d;
+    font-size: 14px;
+    font-weight: 600;
+    margin-left: auto;
+    margin-top:-25px;
+    border-top-left-radius: 10px;
+    z-index: 11;
+}
+
+.navigation-desktop-contact {
+    display:flex;
+    flex-direction: row;
+    margin:10px;
+}
+
+.navigation-desktop-contact:hover {
+    cursor: pointer;
+}
+
+.navigation-desktop-contact-icon-container {
+    display:flex;
+    margin-right:5px;
+}
+
+.navigation-desktop-contact-icon {
+    width:18px;
+    height:auto;
+}
+
+.navigation-desktop-contact-text {
+    display:flex;
+}
+
+.navigation-preload-logo {
+    display:none;
 }

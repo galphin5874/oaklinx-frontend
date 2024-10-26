@@ -2,6 +2,10 @@ import { BrowserRouter as Router, Routes, Route, Outlet, Navigate, useLocation }
 import { lazy, Suspense, useEffect, useState } from 'react';
 import { Navigation } from './Navigation/Navigation.jsx';
 import { Home } from './Home/Home.jsx';
+import { About } from './About/About.jsx';
+import { Services } from './Services/Services.jsx';
+import { Contact } from './Contact/Contact.jsx';
+import { Portal } from './Portal/Portal.jsx';
 import ForgotPassword from './Account/ForgotPassword/ForgotPassword';
 import ChangePassword from './Account/ChangePassword/ChangePassword';
 import UpdateEmail from './Account/UpdateEmail/UpdateEmail';
@@ -55,6 +59,14 @@ export default function App() {
 					<Route path="/register" element={<Register/>}/>
 
 					<Route path="/login" element={<Login/>}/>
+
+					<Route path="/about" element={<About/>}/>
+
+					<Route path="/services" element={<Services/>}/>
+
+					<Route path="/contact" element={<Contact/>}/>
+
+					<Route path="/portal" element={<Portal/>}/>
 				
 				</Route>
 
