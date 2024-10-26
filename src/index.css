@@ -10,6 +10,8 @@
   --menu-color:#f5f5f5;
 
   --header-color:#f5f5f5;
+
+  --card-bg:#28384a;
 }
 
 [ data-theme="dark" ] {
