@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { BASE_URL, getCsrfToken } from '../../Globals';
-import { Input, Button } from '../../components/UI/UI';
+import { Input, Button } from '../../_components/UI/UI';
 import axios from 'axios';
 import './SetPassword.css';
 

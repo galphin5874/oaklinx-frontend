@@ -1,0 +1,41 @@
+{
+	"name": "Howl Forums",
+	"short_name": "Howl",
+	"scope":"https://www.g-applications.com",
+	"start_url": "https://www.g-applications.com",
+	"display": "standalone",
+	"theme_color":"#284a68",
+	"background_color": "#284a68",
+	"description": "General forum",
+	"icons": [
+		{
+			"src": "https://alphaforumstorage.blob.core.windows.net/static/logo128.png",
+			"sizes": "128x128",
+			"type": "image/png"
+		},
+		{
+			"src": "https://alphaforumstorage.blob.core.windows.net/static/logo144.png",
+			"sizes": "144x144",
+			"type": "image/png"
+		},
+		{
+			"src": "https://alphaforumstorage.blob.core.windows.net/static/logo192.png",
+			"sizes": "192x192",
+			"type": "image/png"
+		}
+  ],
+	"screenshots": [
+		{
+			"src": "https://alphaforumstorage.blob.core.windows.net/static/ss540720new.png",
+			"type": "image/png",
+			"sizes": "540x720",
+				"form_factor": "narrow"
+		},
+		{
+			"src": "https://alphaforumstorage.blob.core.windows.net/static/ss720540new.png",
+			"type": "image/png",
+			"sizes": "720x540",
+			"form_factor": "wide"
+		}
+	]
+}
