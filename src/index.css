@@ -33,15 +33,3 @@ body {
 body.dark {
   background: #121212;
 }
-
-.breadcrumbs-container {
-  position: sticky;
-  min-height:35px;
-  top:39.8px;
-  z-index: 6;
-  background:var(--forum-bg);
-}
-
-.forum-children-container {
-  padding-top:0px;
-}
