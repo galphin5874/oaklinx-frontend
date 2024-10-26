@@ -1,0 +1,95 @@
+.rtskeleton-container {
+    display:flex;
+    flex-direction: column;
+    height:100%;
+    background: var(--forum-bg);
+    padding:6px;
+}
+
+.rtskeleton-header-container {
+    display:flex;
+    flex-direction: row;
+    margin-top:5px;
+    margin-bottom:10px
+}
+
+.rtskeleton-header-component-title {
+    height:32px;
+    width:150px;
+    background: var(--forum-input-bg);
+    border-radius: 8px;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-name: shimmer;
+    animation-timing-function: linear;
+    background:var( --forum-loading-skeleton-item-bg);
+    background:var(--forum-loading-skeleton-item-gradient);
+    background-size: 1200px 100%;
+}
+
+.rtskeleton-header-close-button {
+    margin-left:auto;
+    height:25px;
+    width:25px;
+    background: var(--forum-input-bg);
+    border-radius: 8px;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-name: shimmer;
+    animation-timing-function: linear;
+    background:var( --forum-loading-skeleton-item-bg);
+    background:var(--forum-loading-skeleton-item-gradient);
+    background-size: 1200px 100%;
+}
+
+.rtskeleton-title-input {
+    height:32px;
+    width:90vw;
+    background: var(--forum-input-bg);
+    border-radius: 8px;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-name: shimmer;
+    animation-timing-function: linear;
+    background:var( --forum-loading-skeleton-item-bg);
+    background:var(--forum-loading-skeleton-item-gradient);
+    background-size: 1200px 100%;
+}
+
+.rtskeleton-buttons-container {
+    display:flex;
+    flex-direction: row;
+}
+
+.rtskeleton-button {
+    width:23px;
+    height:23px;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-name: shimmer;
+    animation-timing-function: linear;
+    background:var( --forum-loading-skeleton-item-bg);
+    background:var(--forum-loading-skeleton-item-gradient);
+    background-size: 1200px 100%;
+    margin:5px;
+    border-radius: 8px;
+}
+
+.rtskeleton-body {
+    height:180px;
+    width:100%;
+    background: var(--forum-input-bg);
+    border-radius: 8px;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-name: shimmer;
+    animation-timing-function: linear;
+    background:var( --forum-loading-skeleton-item-bg);
+    background:var(--forum-loading-skeleton-item-gradient);
+    background-size: 1200px 100%;
+}

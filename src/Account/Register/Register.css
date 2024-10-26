@@ -1,0 +1,126 @@
+.register-container {
+    display:flex;
+    flex-direction: column;
+    background: var(--bg);
+    height: 100vh;
+    align-items: center;
+    font-weight: 500;
+    color:var(--font-color);
+    padding-top:10px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.register-logo-container {
+    display: flex;
+    height:65px;
+    margin-top:5px;
+    margin-bottom:5px;
+}
+
+.register-logo {
+    width:300px;
+    height:auto;
+}
+
+.register-text {
+    font-size: 20px;
+    font-weight: 700;
+    padding:2px;
+}
+
+.register-input-container {
+    display:flex;
+    justify-content: center;
+    margin:1px;
+}
+
+.register-button-container {
+    padding:5px;
+}
+
+.register-captcha-parent-container {
+    margin:5px;
+    border:solid 1px var(--input-border-color);
+    border-radius: 10px;
+    width:fit-content;
+}
+
+.register-captcha-container {
+   padding:2px;
+}
+
+.register-error-container {
+    display:flex;
+    margin-left: auto;
+    margin-right: auto;
+    width:fit-content;
+    justify-items: center;
+    align-items: center;
+    padding:6px;
+    color:var(--error-text-color);
+    font-weight: 500;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 14px;
+    font-weight: 800;
+    opacity:.9;
+    border:solid 2px red;
+    border-radius: 8px;
+    margin-top:5px;
+}
+
+.register-error-list {
+    display:flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.register-msg-container {
+    display:flex;
+    justify-items: center;
+    width:fit-content;
+    margin-top:5px;
+    margin-left:auto;
+    margin-right:auto;
+    justify-self: center;
+    background-color:rgba(135, 206, 235,.10);
+    color:#E1D9D1;
+    padding:5px;
+    font-size: 15px;
+    border-radius: 8px;
+    font-weight: 600;
+    filter:drop-shadow(1px 1px 2px black);
+}
+
+.register-msg {
+    display:flex;
+    justify-self:center;
+    padding:2px;
+    padding-bottom:3px;
+}
+
+.register-loading-circle {
+    display: flex;
+    width:20px;
+    height:auto;
+    animation:rotation .5s infinite linear;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.register-login {
+    font-size: 15px;
+    margin-top:5px;
+    padding-bottom: 12px;
+}
+
+.register-login-link {
+    color:var(--link-color);
+    text-decoration: none;
+    font-weight: 500;
+    padding:3px;
+}
+
+.register-login-link:hover {
+    text-decoration: underline;
+	color:var(--link-color-hover);
+}

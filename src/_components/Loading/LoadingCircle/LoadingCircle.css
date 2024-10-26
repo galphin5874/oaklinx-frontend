@@ -1,0 +1,9 @@
+.loadingcircle-container {
+    display: flex;
+}
+
+.loadingcircle-icon {
+    width:20px;
+    height:20px;
+    animation:rotation .6s infinite linear;
+}

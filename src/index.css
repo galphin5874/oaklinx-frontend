@@ -1,0 +1,47 @@
+:root {
+  --bg:#f2f9fd;
+  --color:#28384a;
+
+  --navigation-desktop-bg:#28384a;
+  --navigation-desktop-color:#f5f5f5;
+
+  --menu-bg:#28384a;
+  --menu-item-hover-bg:#43556b;
+  --menu-color:#f5f5f5;
+
+  --header-color:#f5f5f5;
+}
+
+[ data-theme="dark" ] {
+  --bg:#121212;
+  --color:#f5f5f5;
+}
+
+body {
+  height:100%;
+  min-width: 320px;
+  padding:0px;
+  margin:0px;
+  background: var(--bg);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+body.dark {
+  background: #121212;
+}
+
+.breadcrumbs-container {
+  position: sticky;
+  min-height:35px;
+  top:39.8px;
+  z-index: 6;
+  background:var(--forum-bg);
+}
+
+.forum-children-container {
+  padding-top:0px;
+}
