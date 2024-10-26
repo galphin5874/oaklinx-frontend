@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 
-export const BASE_URL = '';
+export const BASE_URL = 'https://www.oaklinx.com';
 export const MEDIA_URL = 'https://alphaforumstorage.blob.core.windows.net';
 
 export function getUserLocalStorage () {
