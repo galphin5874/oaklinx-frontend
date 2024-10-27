@@ -48,10 +48,6 @@ export function Navigation () {
         return () => document.removeEventListener('click', handleOutsideAccountMenuClick, true);
     }, [menuDisplay]);
 
-    useEffect(() => {
-        setMenuDisplay("none");
-    }, [location.pathname]);
-
     const updateTheme = (theme) => {
         axios.post(`${BASE_URL}/profile/${user.username}/update_profile`, {
             "theme":theme
@@ -93,7 +89,9 @@ export function Navigation () {
 
                 <div
                     className={'navigation-menu-item'}
-                    onClick={() => navigate("/about")}>
+                    onClick={() => {
+                        navigate("/about");
+                        setMenuDisplay("none");}}>
 
                     About Us
 
@@ -101,7 +99,9 @@ export function Navigation () {
 
                 <div
                     className={'navigation-menu-item'}
-                    onClick={() => navigate("/services")}>
+                    onClick={() => {
+                        navigate("/services");
+                        setMenuDisplay("none");}}>
 
                     Services
 
@@ -109,7 +109,9 @@ export function Navigation () {
 
                 <div
                     className={'navigation-menu-item'}
-                    onClick={() => navigate("/contact")}>
+                    onClick={() => {
+                        navigate("/contact");
+                        setMenuDisplay("none");}}>
 
                     Contact Us
 
@@ -117,7 +119,9 @@ export function Navigation () {
 
                 <div
                     className={'navigation-menu-item'}
-                    onClick={() => navigate("/portal")}>
+                    onClick={() => {
+                        navigate("/portal");
+                        setMenuDisplay("none");}}>
 
                     Client Portal
 
