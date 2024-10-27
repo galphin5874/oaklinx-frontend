@@ -1,6 +1,6 @@
 .navigation-container {
     display:flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     position:sticky;
@@ -46,6 +46,39 @@
     width:40px;
     height:auto;
     margin-top: 5px;
+}
+
+.navigation-contacts-container {
+    display: flex;
+    flex-direction: row;
+    font-size: 10px;
+    font-weight: 700;
+    margin-top:-10px;
+}
+
+.navigation-contact {
+    display:flex;
+    flex-direction: row;
+    margin:10px;
+    align-items: center;
+}
+
+.navigation-contact:hover {
+    cursor: pointer;
+}
+
+.navigation-contact-icon-container {
+    display:flex;
+    margin-right:5px;
+}
+
+.navigation-contact-icon {
+    width:18px;
+    height:auto;
+}
+
+.navigation-contact-text {
+    display:flex;
 }
 
 

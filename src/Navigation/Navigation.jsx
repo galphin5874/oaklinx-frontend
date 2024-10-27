@@ -8,8 +8,11 @@ import logoDesktop from '../_assets/imgs/logodesktop.png';
 import menuIcon from './imgs/menuicon.svg';
 import menuIconClose from './imgs/menuiconclose.svg';
 import facebookIcon from './imgs/facebookicon.png';
+import facebookIconDark from './imgs/facebookicondark.png';
 import mobileIcon from './imgs/mobileicon.svg';
+import mobileIconDark from './imgs/mobileicondark.svg';
 import emailIcon from './imgs/emailicon.svg';
+import emailIconDark from './imgs/emailicondark.svg';
 import Switch from '@mui/material/Switch';
 import './Navigation.css';
 
@@ -20,6 +23,7 @@ export function Navigation () {
     const [currentMenuIcon, setCurrentMenuIcon] = useState(menuIcon);
     const navRef = useRef();
     const menuRef = useRef();
+    const mobileLogoRef = useRef();
     const location = useLocation();
     const navigate = useNavigate();
 
@@ -47,6 +51,10 @@ export function Navigation () {
         }
         return () => document.removeEventListener('click', handleOutsideAccountMenuClick, true);
     }, [menuDisplay]);
+
+    useEffect(() => {
+        setMenuDisplay("none");
+    }, [location.pathname]);
 
     const updateTheme = (theme) => {
         axios.post(`${BASE_URL}/profile/${user.username}/update_profile`, {
@@ -282,8 +290,69 @@ export function Navigation () {
 
                     <img
                         className={'navigation-logo'}
+                        ref={mobileLogoRef}
                         src={logo}
                         onClick={() => navigate("/")}/>
+
+                </div>
+
+            </div>
+
+            <div className={'navigation-contacts-container'}>
+
+                <div
+                    className={'navigation-contact'}
+                    onClick={() => window.location.href = "https://www.facebook.com/people/OakLinx/61567673551189/"}>
+
+                    <div className={'navigation-contact-icon-container'}>
+
+                        <img
+                            className={'navigation-contact-icon'}
+                            src={facebookIconDark}/>
+                            
+                    </div>
+
+                    <div className={'navigation-contact-text'}>
+
+                        Facebook
+
+                    </div>
+
+                </div>
+
+                <div className={'navigation-contact'}>
+
+                    <div className={'navigation-contact-icon-container'}>
+
+                        <img
+                            className={'navigation-contact-icon'}
+                            src={emailIconDark}/>
+                            
+                    </div>
+
+                    <div className={'navigation-contact-text'}>
+
+                        info@oaklinx.com
+
+                    </div>
+
+                </div>
+
+                <div className={'navigation-contact'}>
+
+                    <div className={'navigation-contact-icon-container'}>
+
+                        <img
+                            className={'navigation-contact-icon'}
+                            src={mobileIconDark}/>
+                            
+                    </div>
+
+                    <div className={'navigation-contact-text'}>
+
+                        555-555-5555
+
+                    </div>
 
                 </div>
 
@@ -298,6 +367,22 @@ export function Navigation () {
             <img
                 className={'navigation-preload-logo'}
                 src={logoDesktop}/>
+
+            <img
+                className={'navigation-preload-logo'}
+                src={menuIconClose}/>
+
+            <img
+                className={'navigation-preload-logo'}
+                src={facebookIconDark}/>
+
+            <img
+                className={'navigation-preload-logo'}
+                src={mobileIconDark}/>
+
+            <img
+                className={'navigation-preload-logo'}
+                src={emailIconDark}/>
 
         </div>
     );
